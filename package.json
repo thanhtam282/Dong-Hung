@@ -32,5 +32,9 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-terser": "^1.1.7"
+	},
+	"devDependencies": {
+		"css-declaration-sorter": "^4.0.1",
+		"gulp-group-css-media-queries": "^1.2.2"
 	}
 }

@@ -1,0 +1,67 @@
+.btn-ripple
+	position: relative
+	overflow: hidden
+	.ripple
+		position: absolute
+		width: 0
+		height: 0
+		background-color: rgba(255,255,255,.4)
+		transform: translate(-50%, -50%)
+		border-radius: 50%
+		animation: rippled .5s linear
+	@keyframes rippled
+		100%
+			width: 500px
+			height: 500px
+			opacity: 0
+
+.text-upper
+	text-transform: uppercase
+
+.box-zoom
+	img
+		width: 100%
+	+mq(lg)
+		overflow: hidden
+		img
+			transition: .3s all ease-in-out
+		&:hover
+			img
+				transform: scale3d(1,1,1)
+		
+
+.box-item
+	.box-img
+		img
+			width: 100%
+	+mq(lg)
+		img
+			transition: .3s all ease-in-out
+		&:hover
+			img
+				transform: scale3d(1,1,1)
+=h-title($color: main)
+	color: color-get($mau,$color)
+
+.h-title
+	font-size: r(36px)
+	font-weight: 500
+	&.c-black
+		color: #000000
+	&.c-white
+		color: #ffffff
+	&.c-main
+		color: color-get($mau,main)
+	&.c-extra
+		color: color-get($mau,extra)
+	&.center
+		text-align: center
+	&.left
+		text-align: left
+	@media screen and (max-width: 992px)
+		font-size: 30px
+	@media screen and (max-width: $sm)
+		font-size: 25px
+
+
+

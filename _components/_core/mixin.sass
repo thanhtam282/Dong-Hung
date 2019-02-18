@@ -15,6 +15,9 @@
 @function r($size)
 	@return ($size/16px)*1rem
 
+@function rem($size)
+	@return ($size/16px)*1rem
+
 =line($line)
 	overflow: hidden
 	display: -webkit-box
@@ -58,3 +61,14 @@
 
 =tr($time)
 	transition: all $time+s ease-out
+
+=f-center
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+
+=wh($value)
+	width: $value
+	height: $value
+

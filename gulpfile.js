@@ -14,6 +14,8 @@ prefixer = require('autoprefixer')
 srcmap = require('gulp-sourcemaps')
 browserSync = require('browser-sync')
 readFileSync = require('graceful-fs').readFileSync
+gcmq = require('gulp-group-css-media-queries')
+cssDeclarationSorter = require('css-declaration-sorter')
 sass.compiler = require('dart-sass');
 
 // Task Concat css
@@ -74,8 +76,10 @@ gulp.task('css', function () {
 				browsers: ['last 4 version', "IE 10"],
 				cascade: false,
 			}),
+			cssDeclarationSorter({order: 'smacss'}),
 			cssnano(),
 		]))
+		.pipe(gcmq())
 		.pipe(rename({
 			suffix: '.min'
 		}))
