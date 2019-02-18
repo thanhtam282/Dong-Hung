@@ -1,0 +1,5 @@
+const header = {
+	headerInit: function(){
+		
+	}
+}

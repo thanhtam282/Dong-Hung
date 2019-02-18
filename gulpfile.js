@@ -168,6 +168,7 @@ gulp.task('serve', function () {
 	gulp.watch(['./_components/**/**.sass',], { since: gulp.lastRun('css', 500) }, gulp.series('css'))
 	gulp.watch(['./_components/**/**.js'], { since: gulp.lastRun('scripts', 500) }, gulp.series('scripts'))
 	gulp.watch(['./img/**/**.{svg,gif,png,jpg,jpeg}'], gulp.series('cleanImages', 'copyImages'))
+	gulp.watch('./dist/*.html').on('change', browserSync.reload)
 	gulp.watch('./dist').on('change', browserSync.reload)
 })
 
