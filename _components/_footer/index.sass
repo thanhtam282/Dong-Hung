@@ -1,1 +1,89 @@
-.test:last-child
+footer
+	background: #f5f5f5
+	padding: r(30px) 0
+	.wrapper
+		padding-bottom: r(30px)
+		display: flex
+		flex-wrap: wrap
+		img
+			flex: 0 0 20%
+			max-width: 100%
+			object-fit: contain
+		.detail
+			display: flex
+			width: 80%
+			justify-content: space-between
+			padding-left: 1rem
+			position: relative
+			align-items: center
+			&:after
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 2px
+				height: 100%
+				background: color-get($mau, extra)
+
+				content: ''
+			.info
+				h3
+					font-weight: 600
+					margin-bottom: .5rem
+			.social
+				display: flex
+				a
+					span
+						font-size: r(18px)
+						+wh(30px)
+						+f-center
+						color: color-get($mau,text-3)
+						border: 1px solid color-get($mau,text-3)
+						border-radius: 50%
+						padding: 3px
+					+ a
+						margin-left: .5rem
+	.wrapper-link
+		border-top: 1px solid #e5e5e5
+		padding-top: r(20px)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.link
+			ul
+				display: flex
+				list-style: none
+				li
+					+ li
+						padding-left: r(22px)
+						position: relative
+						&:after
+							position: absolute
+							top: 0
+							left: 11px
+							display: block
+							width: 1px
+							height: 80%
+							margin-top: 5px
+							background: #808080
+							content: ''
+					a
+						color: #808080
+					font-size: r(13px)
+			p
+				color: #808080
+				font-size: r(13px)
+		.ex-link
+			display: flex
+			align-items: center
+			p
+				font-size: r(12px)
+				padding-right: 1rem
+				color: #c5c5c5
+			select
+				background: #ffffff
+				padding: 1rem
+				option
+					font-size: r(14px)
+					color: color-get($mau,text-3)
+
