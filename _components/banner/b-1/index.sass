@@ -1,0 +1,182 @@
+*, :after, :before
+	box-sizing: inherit !important
+
+.o-background, .o-background.-overlay:after
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+.o-layout
+	margin: 0
+	padding: 0
+	list-style: none
+	font-size: 0
+	&.-full
+		height: 100%
+.has-promo 
+	.o-circle
+		width: calc(100vh - 15.75rem)
+.o-layout_item
+	display: inline-block
+	width: 100%
+	vertical-align: top
+	font-size: 1rem
+	padding-left: 0
+.o-background
+	background-size: cover
+	background-position: 50%
+.o-container 
+	z-index: 2
+.o-cicle:before
+	content: ""
+	display: block
+	padding-bottom: 100%
+@media (min-width: 700px)
+	.o-container 
+		margin-right: 9rem
+		margin-left: 9rem
+@media screen and (min-width: 1000px)
+	.u-1\/2\@from-medium
+		width: 50%
+.c-carousel-header_container.-opacity
+	opacity: 0
+	transition-delay: 0s .6s
+.c-carousel-header_container
+	height: calc(100% - 4.5rem)
+.c-carousel-header_circle
+	transition: transform 1.2s cubic-bezier(.4,0,0,1)
+.c-carousel-header_item 
+	> *
+		display: inline-block
+		vertical-align: middle
+		font-size: 1rem
+.c-carousel-header_slide:not(.slick-active) 
+	.c-carousel-header_background-wrap
+		transform: none!important
+		transition: transform .45s cubic-bezier(.4,0,0,1)
+.c-carousel-header_slide 
+	.c-carousel-header_background,  .c-carousel-header_background-small
+		transform: scale(1) rotate(0deg)
+		opacity: 1
+		transition-duration: 1.2s
+		transition-delay: .45s
+		transition-timing-function: cubic-bezier(.23,1,.32,1)
+.c-carousel-header_slide
+	.c-carousel-header_background, .c-carousel-header_background-small
+		transform: scale(1) rotate(0deg)
+		opacity: 1
+		transition-duration: 1.2s
+		transition-delay: .45s
+		transition-timing-function: cubic-bezier(.23,1,.32,1)
+header.c-carousel-header-wrap
+	position: relative
+	.c-carousel-header.js-carouselheader
+		height: 100vh
+		color: color-get($mau,trang)
+		position: relative
+		display: block
+		box-sizing: border-box
+		user-select: none
+		touch-action: pan-y
+		-webkit-tap-highlight-color: transparent
+		.slick-list
+			cursor: auto
+			transform: translateZ(0)
+			overflow: hidden
+			margin: 0
+			padding: 0
+			height: 100%
+			position: relative
+			display: block
+			.slick-track
+				transform: translateZ(0)
+				position: relative
+				left: 0
+				top: 0
+				margin-left: auto
+				margin-right: auto
+				height: 100%
+				.c-carousel-header_slide.js-carouselheader-slide
+					transform: rotate(-35deg) scale(1.85)
+					// padding-top: 11.25rem
+					// height: 100%
+					text-align: center
+					// padding-top: 11.25rem
+					transition: 1s all linear !important
+					opacity: 1!important
+					position: absolute
+					top: 0
+					left: 0
+					.c-carousel-header_background-wrap.o-background.js-animate
+						margin-top: 2.25rem
+						padding-top: 9rem
+						overflow: hidden
+						backface-visibility: hidden
+
+
+						.c-carousel-header_background.o-background.-overlay
+							backface-visibility: hidden
+							transition: transform .6s cubic-bezier(.55,.085,.68,.53),opacity .6s cubic-bezier(.55,.085,.68,.53)
+						.c-carousel-header_container.-overflow.o-container
+							transform: rotate(35deg)
+							transition: 1s all ease-in-out
+							overflow: hidden
+							height: calc(100% - 4.5rem)
+							position: relative
+							text-align: left
+							.c-carousel-header_background-small.o-background.-overlay
+								top: -9rem
+								right: -9rem
+								bottom: -4.5rem
+								left: -9rem
+					.c-carousel-header_container.-opacity.o-container
+						opacity: 1
+						transition-delay: 0
+						.c-carousel-header_layout.o-layout.-full.-relative
+							height: 100%
+							.c-carousel-header_layout_item.o-layout_item
+								position: relative
+								height: 100%
+								.c-carousel-header_circle.o-circle
+									transform: translateX(-50%) rotate(-35deg)
+									transition: transform 1.2s cubic-bezier(.4, 0, 0, 1)
+									border-color: transparent
+									transition-delay: .3s
+
+
+
+							.c-carousel-header_layout_item.c-carousel-header_item.o-layout_item
+								position: relative
+								height: 100%
+								display: inline-block
+								vertical-align: top
+								padding-left: 0
+								blockquote.c-carousel-header_quote
+									position: relative
+									letter-spacing: -.02em
+									margin: 0
+									vertical-align: middle
+									line-height: 1.13333
+									.c-carousel-header_quote_main
+										overflow: hidden
+										p.c-carousel-header_quote_text 
+											transform: translateX(0)
+											transition-delay: .15s
+											font-size: 3.75rem
+											transition: transform 1.2s cubic-bezier(.4,0,0,1)
+											margin-left: .3125rem
+									.c-carousel-header_quote_author 
+										opacity: 1
+										transition-delay: .3s
+										font-size: 15px
+										margin-top: 2rem
+										transition: opacity .45s cubic-bezier(.4,0,0,1)
+					&.slick-active 
+						transition: 1s all linear !important
+						transform:  rotate(0deg) scale(1)
+						.c-carousel-header_circle
+							transform: translateX(-50%) rotate(0deg)
+						.c-carousel-header_background-wrap
+							.c-carousel-header_container
+								transform: rotate(0deg)

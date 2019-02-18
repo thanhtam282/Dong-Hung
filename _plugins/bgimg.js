@@ -9,6 +9,15 @@ function bgimg() {
 		});
 	});
 };
+function bg() {
+	$('[bg]').each(function () {
+		var bg = $(this).attr('bg');
+		$(this).css({
+			"background-image": "url(" + bg + ")"
+		});
+	});
+};
 $(document).ready(function () {
 	bgimg();
+	bg();
 });

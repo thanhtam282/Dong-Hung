@@ -1,10 +1,84 @@
-.home-banner
-	.rev_slider_wrapper
-		.rev-slider#revSlider1
-			ul
-				li(data-transition="fade" data-link="http://www.themepunch.com" data-target="_blank" data-slideindex="back")
-					img(src="https://images.unsplash.com/photo-1546417492-dcfe1fbb6669?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=600&fit=crop&ixid=eyJhcHBfaWQiOjF9", alt="")
-				li(data-transition="fade" data-link="http://www.themepunch.com" data-target="_blank" data-slideindex="back")
-					img(src="https://images.unsplash.com/photo-1547084266-7501a964bf9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=600&fit=crop&ixid=eyJhcHBfaWQiOjF9", alt="")
-				li(data-transition="fade" data-link="http://www.themepunch.com" data-target="_blank" data-slideindex="back")
-					img(src="https://images.unsplash.com/photo-1547070078-442aa97f595a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=600&fit=crop&ixid=eyJhcHBfaWQiOjF9", alt="")
+//- .home-banner
+	//- .rev_slider_wrapper
+	//- 	.rev-slider#revSlider1
+	//- 		- for ( var x = 1 ; x < 4; x++)
+	//- 			.item
+	//- 				.img(bg-img='./img/'+x+'.jpg')
+	//- 					//- .item-child
+	//- 						.bg(bg='./img/'+x+'.jpg')
+	//- 				//- .item-child-
+header.c-carousel-header-wrap(data-module='CarouselHeader')
+	.c-carousel-header.js-carouselheader
+		.c-carousel-header_slide.js-carouselheader-slide
+			.c-carousel-header_background-wrap.o-background.js-animate(data-speed='-1', data-position='top', data-target='.js-carouselheader')
+				.c-carousel-header_background.o-background.-overlay(style="background-image: url('./img/1.jpg');")
+				.c-carousel-header_container.-overflow.o-container
+					.c-carousel-header_background-small.o-background.-overlay(style="background-image: url('./img/1.jpg');")
+			.c-carousel-header_container.-opacity.o-container
+				.c-carousel-header_layout.o-layout.-full.-relative
+					.c-carousel-header_layout_item.o-layout_item(class='u-1/2@from-medium')
+						.c-carousel-header_circle.o-circle
+							//
+								<div class="c-carousel-header_avatar o-avatar">
+								<img src="" alt="">
+								</div>
+					.c-carousel-header_layout_item.c-carousel-header_item.o-layout_item(class='u-1/2@from-medium')
+						blockquote.c-carousel-header_quote
+							.c-carousel-header_quote_main
+								p.c-carousel-header_quote_text Tưng bừng khai trương cửa hàng thứ 10.
+							.c-carousel-header_quote_author Giảm giá 15% từ 15.1.2019 - 20.1.2019
+		.c-carousel-header_slide.js-carouselheader-slide
+			.c-carousel-header_background-wrap.o-background.js-animate(data-speed='-1', data-position='top', data-target='.js-carouselheader')
+				.c-carousel-header_background.o-background.-overlay(style="background-image: url('./img/2.jpg');")
+				.c-carousel-header_container.-overflow.o-container
+					.c-carousel-header_background-small.o-background.-overlay(style="background-image: url('./img/2.jpg');")
+			.c-carousel-header_container.-opacity.o-container
+				.c-carousel-header_layout.o-layout.-full.-relative
+					.c-carousel-header_layout_item.o-layout_item(class='u-1/2@from-medium')
+						.c-carousel-header_circle.o-circle
+							//
+								<div class="c-carousel-header_avatar o-avatar">
+								<img src="" alt="Marc-Antoine Durocher ">
+								</div>
+					.c-carousel-header_layout_item.c-carousel-header_item.o-layout_item(class='u-1/2@from-medium')
+						blockquote.c-carousel-header_quote
+							.c-carousel-header_quote_main
+								p.c-carousel-header_quote_text Nguồn cảm hứng bất tận!
+							.c-carousel-header_quote_author Khám phá câu chuyện thương hiệu
+		.c-carousel-header_slide.js-carouselheader-slide
+			.c-carousel-header_background-wrap.o-background.js-animate(data-speed='-1', data-position='top', data-target='.js-carouselheader')
+				.c-carousel-header_background.o-background.-overlay(style="background-image: url('./img/3.jpg');")
+				.c-carousel-header_container.-overflow.o-container
+					.c-carousel-header_background-small.o-background.-overlay(style="background-image: url('./img/3.jpg');")
+			.c-carousel-header_container.-opacity.o-container
+				.c-carousel-header_layout.o-layout.-full.-relative
+					.c-carousel-header_layout_item.o-layout_item(class='u-1/2@from-medium')
+						.c-carousel-header_circle.o-circle
+							//
+								<div class="c-carousel-header_avatar o-avatar">
+								<img src="" alt="Justin Fraser">
+								</div>
+					.c-carousel-header_layout_item.c-carousel-header_item.o-layout_item(class='u-1/2@from-medium')
+						blockquote.c-carousel-header_quote
+							.c-carousel-header_quote_main
+								p.c-carousel-header_quote_text Phong cách bất hủ không bao giờ cũ.
+							.c-carousel-header_quote_author Khám phá sản phẩm
+		.c-carousel-header_slide.js-carouselheader-slide
+			.c-carousel-header_background-wrap.o-background.js-animate(data-speed='-1', data-position='top', data-target='.js-carouselheader')
+				.c-carousel-header_background.o-background.-overlay(style="background-image: url('./img/4.jpg');")
+				.c-carousel-header_container.-overflow.o-container
+					.c-carousel-header_background-small.o-background.-overlay(style="background-image: url('./img/4.jpg');")
+			.c-carousel-header_container.-opacity.o-container
+				.c-carousel-header_layout.o-layout.-full.-relative
+					.c-carousel-header_layout_item.o-layout_item(class='u-1/2@from-medium')
+						.c-carousel-header_circle.o-circle
+							//
+								<div class="c-carousel-header_avatar o-avatar">
+								<img src="" alt="Caroline Samson">
+								</div>
+					.c-carousel-header_layout_item.c-carousel-header_item.o-layout_item(class='u-1/2@from-medium')
+						blockquote.c-carousel-header_quote
+							.c-carousel-header_quote_main
+								p.c-carousel-header_quote_text Tông màu khuấy đảo đường phố.
+							.c-carousel-header_quote_author Khám phá sản phẩm
+
