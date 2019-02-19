@@ -6,10 +6,8 @@
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
-		"_plugins/mapping-listener.js",
 		"_plugins/btnripple.js",
-		"_plugins/picturefill.js",
-		"_plugins/mapping.js",
+		"_plugins/ofi.min.js",
 		"bower_components/swiper/dist/js/swiper.js"
 	],
 	"font": [
