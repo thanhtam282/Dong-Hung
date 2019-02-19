@@ -4,5 +4,8 @@ $(document).ready(() => {
 	btnRipple('btn-ripple');
 	nav.navInit();
 	objectFitImages();
+
+	// Lĩnh vực
+	linhvuc_detail.linhvucDetailInit();
 });
 
