@@ -2,15 +2,15 @@
 	"css": [
 		"_plugins/grid.css",
 		"_plugins/font.css",
-		"bower_components/slick-carousel/slick/slick-theme.css",
-		"bower_components/slick-carousel/slick/slick.css"
+		"bower_components/swiper/dist/css/swiper.min.css"
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"_plugins/mapping-listener.js",
 		"_plugins/btnripple.js",
 		"_plugins/picturefill.js",
-		"_plugins/mapping.js"
+		"_plugins/mapping.js",
+		"bower_components/swiper/dist/js/swiper.js"
 	],
 	"font": [
 		"bower_components/mdi/fonts/*",
