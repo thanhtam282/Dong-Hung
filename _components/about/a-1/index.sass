@@ -1,0 +1,48 @@
+.dh-about-1
+	padding: r(44px) 0
+	@media screen and (max-width: 1200px)
+		padding: r(30px) 0
+	.main
+		figure
+			margin-top: 1rem
+			@media screen and (min-width: 1200px)
+				display: flex
+				flex-wrap: wrap
+				flex-direction: row-reverse
+			.box-zoom
+				flex: 0 0 50%
+			figcaption
+				flex: 0 0 50%
+				@media screen and (min-width: 1200px)
+					padding-right: 1rem
+				h3 
+					color: color-get($mau,text-3)
+					font-size: 1.5rem
+					padding-top: 1rem
+					@media screen and (min-width: 1200px)
+						padding-top: 0
+						font-size: r(30px)
+				p
+					padding-top: 1rem
+	.sub
+		.wrapper
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -15px
+			figure
+
+				padding: 1.2rem 15px
+				border: 1px solid #e5e5e5
+				background: color-get($mau, trang)
+				flex: 0 0 50%
+				.box-zoom
+					display: flex
+					justify-content: center
+					img
+						object-fit: contain
+						width: auto
+				figcaption
+					margin-top: 1rem
+					h4
+						color: color-get($mau,text-3)
+						text-align: center
