@@ -1,1 +1,63 @@
-.dh-
+.dh-about-3
+	.swiper-button-prev
+		width: 40px
+		height: 40px
+		background-image: none
+		z-index: 2
+		left: -.5rem
+		top: 65%
+		// transform: translateY(-50%)
+		+f-center
+		color: color-get($mau,text-9)
+		@media screen and (min-width: $sm)
+			display: none
+			color: #ebebeb
+			left: -2rem
+		&.swiper-button-disabled
+			pointer-events: initial
+		span
+			font-size: r(50px)
+		transition: .3s all ease-in-out
+		&:hover, &:active, &:focus
+			outline: none
+	.swiper-button-next
+		width: 40px
+		height: 40px
+		+f-center
+		background-image: none
+		z-index: 2
+		right: -.5rem
+		top: 65%
+		// transform: translateY(-50%)
+		color: color-get($mau,text-9)
+		@media screen and (min-width: $sm)
+			display: none
+			color: #ebebeb
+			right: -2rem
+
+		&.swiper-button-disabled
+			pointer-events: initial
+
+		span
+			font-size: r(50px)
+		transition: .3s all ease-in-out
+		&:hover, &:active, &:focus
+			outline: none
+	.swiper-container
+		.swiper-slide
+			font-size: r(14px)
+			height: initial
+			h3
+				font-size: r(24px)
+				color: color-get($mau,main)
+				font-weight: bold
+			h4
+				color: color-get($mau,trang)
+				font-size: r(18px)
+				background: color-get($mau, main)
+
+			p
+				padding: r(25px) r(12px) r(20px) r(20px)
+				height: 100%
+				text-align: left
+				position: relative

@@ -7,5 +7,7 @@ $(document).ready(() => {
 
 	// Lĩnh vực
 	linhvuc_detail.linhvucDetailInit();
+	slider.about_slider_1();
+	slider.about_slider_2();
 });
 

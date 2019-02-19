@@ -9,11 +9,13 @@ section.dh-about-1(style="background-image: url('./img/home/home_about_bg.png')"
 					figcaption
 						h3 Khát vọng đem đến những đôi giày vững chắc cho mỗi bước đi trong cuộc đời
 						p Với 27 năm hình thành và phát triển không ngừng, Đông Hưng Group gắn liền với khách hàng Việt những sản phẩm giày chất lượng cao và thời trang. Bằng nhà máy sản xuất hiện đại cùng quy trình sản xuất giày tiên tiến, Đông Hưng Group mong muốn là người đồng hành trong một bước đi chinh phục cuộc sống của hàng triệu người tiêu dùng trong nước và thế giới.
-			.col-12.sub
-				.wrapper
-					- for ( var x = 0 ; x < 4 ; x++)
-						figure
-							.box-zoom
-								img(src='./img/home/home_about_icon1.png', alt='')
-							figcaption
-								h4 Nhà máy sản xuất đạt tiêu chuẩn quốc tế
+		.row.grid-row-10
+			- for ( var x = 1 ; x < 5 ; x++)
+				.col-6.col-md-3.grid-col-10.sub
+					figure
+						.boxzoom
+							img(src='./img/home/home_about_icon'+x+'.png', alt='')
+						figcaption
+							h4 Nhà máy sản xuất đạt tiêu chuẩn quốc tế
+					//- .wrapper
+					//- 		.block

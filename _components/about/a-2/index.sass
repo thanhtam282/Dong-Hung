@@ -1,1 +1,113 @@
-.dh-
+.dh-about-2
+	padding: r(46px) 0
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	.h-title
+		font-weight: 300
+		@media screen and (min-width: 992px)
+			margin-bottom: r(20px)
+	.content
+		color: color-get($mau,trang)
+		height: 100%
+		overflow: hidden
+		h3
+			font-size: r(24px)
+			padding-top: 1rem
+			padding-bottom: r(10px)
+			@media screen and (min-width: 992px)
+				padding-top: 0
+				padding-bottom: r(20px)
+		.briefcontent
+			background: rgba(0,0,0, 0.15)
+			height: 100%
+			p
+				padding: r(25px)
+				position: relative
+				font-size: 1rem
+				@media screen and (min-width: 992px)
+					font-size: r(18px)
+				&:after
+					position: absolute
+					top: 30px
+					display: block
+					width: 5px
+					height: 12px
+					left: 0
+					content: ''
+					background: color-get($mau, extra)
+	.other
+		position: relative
+		h3
+			font-size: r(24px)
+			padding-top: 1rem
+			padding-bottom: r(10px)
+			color: color-get($mau,trang)
+			@media screen and (min-width: 992px)
+				padding-top: 0
+				margin-top: 2rem
+				padding-bottom: r(20px)
+		.swiper-button-prev
+			width: 40px
+			height: 40px
+			background-image: none
+			z-index: 2
+			left: -.5rem
+			top: 65%
+			// transform: translateY(-50%)
+			+f-center
+			color: color-get($mau,text-9)
+			@media screen and (min-width: $sm)
+				display: none
+				color: #ebebeb
+				left: -2rem
+			&.swiper-button-disabled
+				pointer-events: initial
+			span
+				font-size: r(50px)
+			transition: .3s all ease-in-out
+			&:hover, &:active, &:focus
+				outline: none
+		.swiper-button-next
+			width: 40px
+			height: 40px
+			+f-center
+			background-image: none
+			z-index: 2
+			right: -.5rem
+			top: 65%
+			// transform: translateY(-50%)
+			color: color-get($mau,text-9)
+			@media screen and (min-width: $sm)
+				display: none
+				color: #ebebeb
+				right: -2rem
+
+			&.swiper-button-disabled
+				pointer-events: initial
+
+			span
+				font-size: r(50px)
+			transition: .3s all ease-in-out
+			&:hover, &:active, &:focus
+				outline: none
+		.swiper-container
+			.swiper-slide
+				color: color-get($mau,trang)
+				font-size: r(14px)
+				height: initial
+				+f-center
+				background: rgba(0,0,0, 0.15)
+				p
+					padding: r(25px) r(12px) r(20px) r(20px)
+					height: 100%
+					text-align: left
+					position: relative
+					&:after
+						position: absolute
+						top: 28px
+						display: block
+						width: 5px
+						height: 12px
+						left: 0
+						content: ''
+						background: color-get($mau, extra)
