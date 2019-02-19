@@ -4,5 +4,7 @@ $(document).ready(() => {
 	btnRipple('btn-ripple');
 	nav.navInit();
 	objectFitImages();
+	slider.about_slider_1();
+	slider.about_slider_2();
 });
 
