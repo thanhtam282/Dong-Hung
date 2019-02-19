@@ -1,0 +1,26 @@
+.dh-same-page
+	.same-describe
+		h2
+			padding-bottom: 0
+			&:after
+				content: none
+	p
+		line-height: rem(22px)
+	+mq(down-sm)
+		p
+			font-size: rem(13px)
+	+mq(down-md)
+		padding-top: rem(30px)
+		padding-bottom: rem(30px)
+		p
+			font-size: rem(14px)
+	@media screen and (min-width: 768px)
+		p
+			padding-left: 1rem
+	+mq(lg)
+		padding-top: rem(60px)
+		padding-bottom: rem(60px)
+		h2
+			line-height: rem(40px)
+		p
+			padding-left: rem(30px)
