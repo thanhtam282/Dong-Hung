@@ -1,0 +1,49 @@
+
+
+.dh-banner-1
+	.banner-wrapper
+		position: relative
+	.banner-title
+		position: absolute
+		left: 0
+		width: 100%
+		color: #ffffff
+		text-transform: uppercase
+		h1 , p
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25)
+		h1
+			font-weight: 700
+			margin-bottom: rem(15px)
+	.banner-img
+		img
+			width: 100%
+			object-fit: cover
+			font-family: 'object-fit: cover;'
+	@media screen and (max-width: 950px)
+		.banner-img
+			img
+				height: rem(200px)
+	@media screen and (max-width: 1199.99px)
+		.banner-title
+			top: 50%
+			transform: translateY(-50%)
+	@media screen and (min-width: 1200px)
+		.banner-img
+			img
+				height: rem(400px)
+		.banner-title
+			top: 30%
+			h1
+				font-size: rem(40px)
+				line-height: 50px
+			p
+				font-size: rem(24px)
+		.banner-title-inner
+			&:before
+				content: ''
+				width: 2px
+				height: 100px
+				background-color: map-get($mau,extra)
+				position: absolute
+				top: rem(-120px)
+				left: auto
