@@ -1,0 +1,80 @@
+.dh-gallery-1
+	a
+		display: block
+	.see-more
+		text-align: center
+		margin-top: rem(20px)
+		a
+			background-color: #f5f5f5
+			padding: rem(10px)
+			text-decoration: none
+			display: block
+			color: map-get($mau,main)
+			text-transform: uppercase
+			font-weight: 400
+			font-size: rem(14px)
+			&:after
+				content: '\f045'
+				font-family: 'Material Design Icons'
+				font-size: rem(14px)
+				line-height: rem(20px)
+				display: inline-block
+				margin-left: rem(13px)
+			+mq(lg)
+				transition: all .3s ease-in-out
+				&:hover
+					background-color: map-get($mau,main)
+					color: #ffffff
+	.gallery-item
+		margin-bottom: rem(10px)
+		figure
+			position: relative
+		figcaption
+			position: absolute
+			z-index: 1
+			bottom: 0
+			left: 0
+			display: flex
+			padding: rem(20px)
+		h2
+			color: #ffffff
+			font-size: 1rem
+			text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3)
+		span
+			color: #ffffff
+			margin-right: 10px
+			font-size: rem(24px)
+			&.mdi-image-multiple
+				&:before
+					content: '\f2ef'
+			&.mdi-youtube-tv
+				&:before
+					content: '\f448'
+		&.gallery-item-big
+			figcaption
+				padding: rem(22px)
+			h2
+				font-size: rem(18px)
+				line-height: rem(25px)
+			span
+				font-size: rem(48px)
+				margin-right: rem(18px)
+				line-height: rem(20px)
+		.box-zoom
+			a
+				+ a
+					display: none
+	+mq(down-md)
+		padding-top: rem(30px)
+		padding-bottom: rem(30px)
+	+mq(lg)
+		padding-top: rem(50px)
+		padding-bottom: rem(50px)
+		.gallery-item
+			.box-zoom
+				overflow: hidden
+				img
+					transition: all .3s ease-in-out
+			&:hover
+				img
+					transform: scale(1.05)
