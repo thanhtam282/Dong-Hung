@@ -1,0 +1,99 @@
+.dh-truyenthong-1
+	padding: r(30px) 0
+	@media screen and (min-width: 992px)
+		padding: r(45px) 0
+	.main, .sub
+		figure
+			display: flex
+			flex-wrap: wrap
+			@media screen and (max-width: $lg)
+				flex-direction: column
+				.box-zoom
+					flex: 0 0 100%
+					width: 100%
+				figcaption
+					flex: 0 0 100%
+					width: 100%
+			@media screen and (max-width: $sm)
+				flex-direction: initial
+				figcaption
+					flex: 0 0 50%
+					width: 50%
+				.box-zoom
+					width: 50%
+					flex: 0 0 50%
+
+			.box-zoom
+				flex: 0 0 50%
+				img
+					height: 100%
+					object-fit: cover
+			figcaption
+				flex: 0 0 50%
+				background: #f8f8f8
+				padding: r(45px) r(30px) r(30px)
+				@media screen and (max-width: 992px)
+					padding: 1rem
+				h3
+					color: color-get($mau,text-3)
+					line-height: initial
+
+					@media screen and (min-width: 992px)
+						font-size: rem(30px)
+					@media screen and (max-width: $sm)
+						font-size: rem(18px)
+
+				time
+					color: color-get($mau,text-9)
+					font-size: r(14px)
+				p
+					padding-top: .5rem
+					font-size: r(18px)
+					color: color-get($mau,text-3)
+					padding-bottom: 1.2rem
+					@media screen and (max-width: 992px)
+						font-size: r(14px)
+				.btn-more
+					border: 1px solid color-get($mau,text-3)
+					color: color-get($mau,text-3)
+					&:hover
+						color: color-get($mau,text-3)
+						@media screen and (min-width: 992px)
+							color: color-get($mau,trang)
+							border: 1px solid color-get($mau,main)
+	.sub
+		&:nth-child(4n + 1), &:nth-child(4n )
+			figure
+				@media screen and (min-width: 992px)
+					flex-direction: row-reverse
+
+		figure
+			margin-top: 10px
+
+			figcaption
+				position: relative
+				padding:  r(30px) r(20px)
+
+				h3
+					padding-bottom: .5rem
+					@media screen and (min-width: 992px)
+						font-size: rem(18px)
+					@media screen and (max-width: $sm)
+						font-size: rem(16px)
+
+				.btn-more
+					margin-top: .5rem
+					@media screen and (min-width: 992px)
+						margin-top: 0
+						position: absolute
+						bottom: 1.5rem
+	.btn-continue
+		margin-top: 27px
+		font-size: r(14px)
+		width: 100%
+		display: block
+		background: #f5f5f5
+		padding: .5rem 0
+		text-align: center
+		color: color-get($mau,main)
+		text-transform: uppercase
