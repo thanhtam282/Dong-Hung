@@ -21,10 +21,10 @@
 				top: 0
 				right: r(20px)
 				line-height: r(45px)
-			@media screen and (min-width: 1200px)
+			@media screen and (min-width: 992px)
 				display: none
 		nav
-			@media screen and (max-width: 1199.98px)
+			@media screen and (max-width: 991.99px)
 				position: absolute
 				left: 0
 				top: 100%
@@ -40,13 +40,12 @@
 				display: flex
 				justify-content: center
 				flex-direction: column
-				@media screen and (max-width: 1199.98px)
+				@media screen and (min-width: 992px)
 					background: color-get($mau,main)
-				@media screen and (min-width: 1200px)
 					justify-content: flex-start
 					flex-direction: row
 				li
-					@media screen and (max-width: 1199.98px)
+					@media screen and (max-width: 991.99px)
 						opacity: 0
 						transform: translate3d(0, 36px, 0)
 					a
@@ -55,7 +54,7 @@
 						font-size: r(15px)
 						font-weight: 400
 						text-decoration: none
-						text-transform: uppercase
+						// text-transform: uppercase
 						color: #ffffff
 						position: relative
 						border-right: 2px solid color-get($mau,main)
@@ -84,13 +83,9 @@
 									left: 0
 									bottom: 0
 									height: 2px
-								
+						@media screen and (max-width: 991.99px)
+							background: color-get($mau, main)
 						@media screen and (min-width: 992px)
-							// &:hover
-							// 	color: #ffffff
-							// 	background: color-get($mau,main)
-							// 	+box-sha(inset 0 -2px 0 0 color-get($mau,vang))
-						@media screen and (min-width: 1200px)
 							transition: .3s all ease-in-out
 							&:hover , &.active
 								color: #ffffff
