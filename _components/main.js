@@ -4,7 +4,13 @@ $(document).ready(() => {
 	btnRipple('btn-ripple');
 	nav.navInit();
 	objectFitImages();
-	slider.about_slider_1();
-	slider.about_slider_2();
+	slider.aboutInit();
+});
+
+$(window).scroll(function () { 
+	if ($('.dh-nav-2').length) {
+		slider.checkMenuScroll();
+	}
+	
 });
 

@@ -91,6 +91,8 @@
 			&:hover, &:active, &:focus
 				outline: none
 		.swiper-container
+			@media screen and (min-width: 992px)
+				pointer-events: none
 			.swiper-slide
 				color: color-get($mau,trang)
 				font-size: r(14px)

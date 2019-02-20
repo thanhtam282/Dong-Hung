@@ -1,1 +1,39 @@
-.dh-
+.dh-about-4, .dh-about-5
+	padding: r(50px) 0
+	@media screen and (max-width: 992px)
+		padding: r(30px) 0
+	.h-title
+		color: color-get($mau,text-3)
+	h3
+		font-size: r(24px)
+		text-transform: uppercase
+		padding: 1rem 0
+	.col-sm-4
+		@media screen and (max-width: $sm)
+			margin: 0 auto
+	figure
+		@media screen and (max-width: $sm)
+			margin-top: 1rem
+		.box-zoom
+			img
+				width: 100%
+			&:hover
+				@media screen and (min-width: 992px)
+					img
+						transform: scale(1.05)
+		figcaption
+			padding-top: .8rem
+			color: color-get($mau,text-3)
+			text-transform: uppercase
+			h4
+				font-size: r(18px)
+				font-weight: 600
+				@media screen and (max-width: 992px)
+					font-size: 1rem
+			p
+				font-size: r(14px)
+.dh-about-5
+	padding-top: 0 !important
+	figure
+		@media screen and (max-width: $md)
+			margin-top: 1rem
