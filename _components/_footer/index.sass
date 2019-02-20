@@ -11,7 +11,7 @@ footer
 			max-height: 70px
 			object-fit: contain
 			width: 100%
-			@media screen and (min-width: $md)
+			@media (min-width: $md)
 				width: 15%
 				padding-right: 1rem
 				flex: 0 0 15%
@@ -23,7 +23,7 @@ footer
 			padding-left: 1rem
 			position: relative
 			align-items: center
-			@media screen and (max-width: $md)
+			@media (max-width: $md)
 				width: 100%
 				margin-top: 1rem
 				flex-direction: column
@@ -43,7 +43,7 @@ footer
 					margin-bottom: .5rem
 			.social
 				display: flex
-				@media screen and (max-width: 992px)
+				@media (max-width: 992px)
 					margin-top: 1rem
 				a
 					span
@@ -59,7 +59,7 @@ footer
 						margin-left: .5rem
 					&:hover
 						text-decoration: none
-						@media screen and (min-width: 992px)
+						@media (min-width: 992px)
 							span
 								border: 1px solid color-get($mau,extra)
 								background: color-get($mau, extra)
@@ -70,7 +70,7 @@ footer
 		display: flex
 		justify-content: space-between
 		align-items: center
-		@media screen and (max-width: 992px)
+		@media (max-width: 992px)
 			flex-direction: column
 		.link
 			ul
@@ -93,7 +93,7 @@ footer
 					a
 						color: #808080
 					font-size: r(13px)
-				@media screen and (max-width: $sm)
+				@media (max-width: $sm)
 					flex-direction: column
 					li
 						+ li
@@ -107,9 +107,9 @@ footer
 		.ex-link
 			display: flex
 			align-items: center
-			@media screen and (max-width: 992px)
+			@media (max-width: 992px)
 				margin-top: 1rem
-			@media screen and (max-width: $xs)
+			@media (max-width: $xs)
 				flex-direction: column
 				width: 100%
 				align-items: flex-start
@@ -117,7 +117,7 @@ footer
 				font-size: r(12px)
 				padding-right: 1rem
 				color: #c5c5c5
-				@media screen and (max-width: 992px)
+				@media (max-width: 992px)
 					margin-bottom: .5rem
 			.custom-select
 				padding: 1px
@@ -153,5 +153,5 @@ footer
 					color: #c5c5c5
 
 					
-	@media screen and (min-width: 1200px)
+	@media (min-width: 1200px)
 		padding-left: rem(270px)
