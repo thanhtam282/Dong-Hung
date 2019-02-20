@@ -110,10 +110,13 @@ var slider = {
 	checkMenuScroll: () => {
 		var windowScrollTop = $(window).scrollTop(),
 			headerOuterHeight = $('header').outerHeight(),
-			navOffset = $('.dh-nav-2').offset().top,
 			windowHeight = $(window).height(),
 			subbar = $('.dh-header .subbar').outerHeight(),
 			menu = 0
+			if ($('.dh-nav-2').length > 0) {
+
+				var navOffset = $('.dh-nav-2').offset().top
+			}
 		if (((navOffset ) - windowScrollTop) <= 0) {
 			if ($('header').hasClass("active") == true) {
 				if ($(window).width() < 992) {
@@ -151,10 +154,82 @@ var slider = {
 			return false;
 		})
 	},
+	media_slider_1: () => {
+		let about_slider_2 = new Swiper('.dh-truyenthong-ct .swiper-container', {
+			slidesPerView: 4,
+			spaceBetween: 10,
+			// slidesPerView: 'auto',
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			loop: true,
+			// autoHeight: false,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'progressbar',
+			},
+			navigation: {
+				nextEl: '.dh-truyenthong-ct .swiper-button-next',
+				prevEl: '.dh-truyenthong-ct .swiper-button-prev',
+			},
+			breakpoints: {
+				// when window width is <= 320px
+				450: {
+					slidesPerView: 1,
+				},
+				// when window width is <= 640px
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1300: {
+					slidesPerView: 4,
+				}
+			}
+		})
+	},
+	career_slider_1: () => {
+		let home_slider_3 = new Swiper('.dh-tuyendung-2 .swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 3,
+			autoHeight: false,
+			loop: false,
+			// autoHeight: false,
+			navigation: {
+				nextEl: '.dh-tuyendung-2 .swiper-button-next',
+				prevEl: '.dh-tuyendung-2 .swiper-button-prev',
+			},
+			breakpoints: {
+				// when window width is <= 320px
+				450: {
+					slidesPerView: 2,
+					autoplay: {
+						delay: 5000,
+						disableOnInteraction: false,
+					},
+				},
+				// when window width is <= 640px
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1300: {
+					slidesPerView: 3,
+				}
+			}
+		})
+	},
 	aboutInit: () => {
 		slider.about_slider_1();
 		slider.about_slider_2();
 		slider.about_slider_3();
+		slider.media_slider_1();
+		slider.career_slider_1();
 		slider.checkMenuScroll();
 		slider.clickMenuScroll();
 	}

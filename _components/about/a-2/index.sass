@@ -1,4 +1,4 @@
-.dh-about-2
+.dh-about-2, .dh-tuyendung-2
 	padding: r(46px) 0
 	@media screen and (max-width: 992px)
 		padding: r(30px) 0
@@ -102,8 +102,15 @@
 				p
 					padding: r(25px) r(12px) r(20px) r(20px)
 					height: 100%
+					margin-bottom: r(20px)
 					text-align: left
 					position: relative
+					+line(5)
+					overflow: hidden
+					height: 115px
+					@media screen and (max-width: 992px)
+						font-size: r(14px)
+
 					&:after
 						position: absolute
 						top: 28px
@@ -113,3 +120,14 @@
 						left: 0
 						content: ''
 						background: color-get($mau, extra)
+.dh-tuyendung-2
+	.grid-col-10
+		display: flex
+		flex-direction: column
+	.content
+		height: 100%
+		.briefcontent
+			p
+				padding-bottom: r(35px)
+	.other
+		margin-top: 3px
