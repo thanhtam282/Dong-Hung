@@ -1,11 +1,20 @@
 .dh-same-page
 	.same-describe
+		padding-bottom: rem(24px)
+		box-shadow: inset 0 -1px 0 0 #cccccc
 		h2
 			padding-bottom: 0
 			&:after
 				content: none
 	p
 		line-height: rem(22px)
+	.same-item
+		h2
+			margin-bottom: rem(10px)
+		figure
+			background-color: #f5f5f5
+		&:last-child
+			margin-bottom: 0
 	+mq(down-sm)
 		p
 			font-size: rem(13px)
@@ -14,13 +23,47 @@
 		padding-bottom: rem(30px)
 		p
 			font-size: rem(14px)
+	@media screen and (max-width: 767.99px)
+		.same-describe
+			h2
+				margin-bottom: rem(10px)
+		.same-items
+			padding-top: rem(24px)
+		.same-item
+			margin-bottom: 1rem
+			figcaption
+				padding: rem(14px)
 	@media screen and (min-width: 768px)
-		p
-			padding-left: 1rem
+		.same-describe
+			p
+				padding-left: 1rem
+		.same-items
+			padding-top: rem(50px)
+		.same-item
+			margin-bottom: rem(50px)
+			img
+				height: 100%
+				object-fit: cover
+			figure
+				display: flex
+			.box-zoom , figcaption
+				flex: 0 0 50%
+			figcaption
+				display: flex
+				flex-direction: column
+				justify-content: center
+				padding: 1rem
+			&:nth-child(even)
+				figcaption
+					order: -1
 	+mq(lg)
 		padding-top: rem(60px)
 		padding-bottom: rem(60px)
 		h2
 			line-height: rem(40px)
-		p
-			padding-left: rem(30px)
+		.same-describe
+			p
+				padding-left: rem(30px)
+		.same-item
+			figcaption
+				padding: rem(30px)

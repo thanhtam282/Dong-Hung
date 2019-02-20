@@ -1,0 +1,42 @@
+.linhvuc-detail-1
+	background-size: cover
+	// background-attachment: fixed
+	h2
+		margin-bottom: rem(30px)
+	.linhvuc-slider
+		position: relative
+	.swiper-container
+		.swiper-slide
+			img
+				width: 100%
+	.linhvuc-icon-next , .linhvuc-icon-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: rem(36px)
+		z-index: 1
+	+mq(down-md)
+		padding-top: rem(30px)
+		padding-bottom: rem(30px)
+		.linhvuc-icon-next , .linhvuc-icon-prev
+			color: map-get($mau, extra)
+		.linhvuc-icon-next
+			right: 0
+		.linhvuc-icon-prev
+			left: 0
+	+mq(lg)
+		padding-top: rem(60px)
+		padding-bottom: rem(60px)
+		.swiper-container
+			padding-right: rem(10px)
+			padding-left: rem(10px)
+		.linhvuc-icon-next , .linhvuc-icon-prev
+			transition: color .3s ease-in-out
+			cursor: pointer
+			color: #ffffff
+			&:hover
+				color: map-get($mau, extra)
+		.linhvuc-icon-next
+			right: -2.2rem
+		.linhvuc-icon-prev
+			left: -2.2rem
