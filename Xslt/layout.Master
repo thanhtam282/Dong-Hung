@@ -80,29 +80,24 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 			<header class="dh-header">
 				<div class="header-container">
 					<div class="header-hamburger btn-ripple"><span></span></div>
-					<div class="header-logo"><img src="./img/logo.png" alt=""></div>
+					<div class="header-logo">
+						<portal:ModuleWrapper ID="mdl138" runat="server" ConfigureModuleId="138" />
+					</div>
 					<div class="header-nav">
 						<nav>
-							<ul>
-								<li><a class="active" href="#">Trang chủ</a></li>
-								<li><a href="about.html">Giới thiệu</a></li>
-								<li><a href="linhvuc.html">Lĩnh vực hoạt động</a></li>
-								<li><a href="#">Phát triển bền vựng</a></li>
-								<li><a href="truyenthong.html">Truyền thông</a></li>
-								<li><a href="tuyendung-1.html#">Cơ hội nghề nghiệp</a></li>
-								<li><a href="#">Liên hệ</a></li>
-							</ul>
+							<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
 						</nav>
 					</div>
-					<div class="header-phone"><a href="tel:(+84)274-3727015">(+84)274-3727015</a></div>
+					<div class="header-phone">
+						<portal:ModuleWrapper ID="mdl139" runat="server" ConfigureModuleId="139" />
+					</div>
 					<div class="header-bar">
 						<div class="header-search">
-							<div class="searchbox">
-								<input type="text" name="" placeholder="Tìm kiếm...">
-								<button type="submit"><i class="mdi mdi-magnify"></i></button>
-							</div>
+							<portal:ModuleWrapper ID="mdl141" runat="server" ConfigureModuleId="141" />
 						</div>
-						<div class="header-language"><a class="language-active" href="">EN</a></div>
+						<div class="header-language">
+							<portal:ModuleWrapper ID="mdl142" runat="server" ConfigureModuleId="142" />
+						</div>
 					</div>
 				</div>
 				<!-- <portal:SiteLogo ID="SiteLogo1" runat="server" />
@@ -131,7 +126,47 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 			</main>
 			<!-- ////////////// End Main ////////////// -->
 			<!-- ////////////// Footer ////////////// -->
-			<footer>
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="wrapper">
+								<portal:ModuleWrapper ID="mdl143" runat="server" ConfigureModuleId="143" />
+								<div class="detail">
+									<div class="info">
+										<portal:ModuleWrapper ID="mdl144" runat="server" ConfigureModuleId="144" />
+									</div>
+									<div class="social"><a href="#"><span class="fa fa-facebook"></span></a><a href="#"><span class="fa fa-youtube">
+											</span></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="wrapper-link">
+								<div class="link">
+									<ul>
+										<li><a href="#">Sơ đồ trang web</a></li>
+										<li><a href="#">Chính sách bảo mật</a></li>
+										<li><a href="#">Điều khoản sử dụng</a></li>
+									</ul>
+									<p>© 2018 Đông Hưng Group. All rights reserved. Designed by Cánh Cam.</p>
+								</div>
+								<div class="ex-link">
+									<p>Đông Hưng Group</p>
+									<div class="custom-select">
+										<select>
+											<option>Đông Hưng Group</option>
+											<option>Đông Hưng Group</option>
+											<option>Đông Hưng Group</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
 					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
 				</asp:Panel>
