@@ -1,4 +1,32 @@
 var slider = {
+	home_slider_1: () => {
+		let home_slider_2 = new Swiper('.dh-home-1 .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+		})
+	},
+	home_slider_2: () => {
+		let home_slider_2 = new Swiper('.dh-home-3 .swiper-container', {
+			slidesPerView: 1,
+			autoHeight: false,
+			loop: true,
+			// autoHeight: false,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			navigation: {
+				nextEl: '.dh-home-3 .swiper-button-next',
+				prevEl: '.dh-home-3 .swiper-button-prev',
+			},
+		})
+	},
 	about_slider_1: () => {
 		let home_slider_2 = new Swiper('.dh-about-2 .swiper-container', {
 			slidesPerView: 7,
@@ -225,6 +253,8 @@ var slider = {
 		})
 	},
 	aboutInit: () => {
+		slider.home_slider_1();
+		slider.home_slider_2();
 		slider.about_slider_1();
 		slider.about_slider_2();
 		slider.about_slider_3();

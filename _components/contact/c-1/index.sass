@@ -144,6 +144,7 @@
 				margin: 0
 			.frm-btn
 				.frm-btn-submit
+					border: 0 !important
 					height: 40px
 					// min-width: 180px
 					font-size: r(15px)
@@ -153,11 +154,15 @@
 					color: color-get($mau,trang)
 					min-width: 140px
 					background: color-get($mau,main)
+					transition: .3s all ease-in-out
+					cursor: pointer
 					@media  (max-width: $sm)
 						min-width: none
 
 						width: 100%
 					&:hover, &:active, &:focus
 						outline: none
+						@media  (min-width: 992px)
+							background: color-get($mau, extra)
 				.frm-btn-reset
 					display: none
