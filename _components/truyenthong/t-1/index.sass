@@ -2,7 +2,9 @@
 	padding: r(30px) 0
 	@media (min-width: 992px)
 		padding: r(45px) 0
-	.main, .sub
+	.sub
+		flex: 0 0 100%
+		max-width: 100%
 		figure
 			display: flex
 			flex-wrap: wrap
@@ -22,6 +24,14 @@
 				.box-zoom
 					width: 50%
 					flex: 0 0 50%
+			@media (max-width: 400px)
+				flex-direction: column
+				.box-zoom
+					flex: 0 0 100%
+					width: 100%
+				figcaption
+					flex: 0 0 100%
+					width: 100%
 
 			.box-zoom
 				flex: 0 0 50%
@@ -61,7 +71,11 @@
 						@media (min-width: 992px)
 							color: color-get($mau,trang)
 							border: 1px solid color-get($mau,main)
-	.sub
+	
+	.sub:not(:nth-child(1))
+		@media (min-width: $sm)
+			flex: 0 0 50%
+			max-width: 50%
 		&:nth-child(4n + 1), &:nth-child(4n )
 			figure
 				@media (min-width: 992px)
