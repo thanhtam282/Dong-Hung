@@ -13,9 +13,26 @@ $(document).ready(() => {
 	slider.about_slider_2();
 	linhvuc_detail.linhvucDetailInit();
 
+
+	// Load Ajax
+	$('body').on('click', '.dh-gallery-1 .see-more a', function (e) {
+		e.preventDefault()
+		let pageurl = $('.dh-gallery-1 .see-more a').attr('href');
+		$.ajax({
+			url: pageurl,
+			data: {
+				isajax: true
+			},
+			type: 'post',
+			success: function (data) {
+				$('.ajaxwrapper').append($(data).find('.ajaxwrapper').html());
+				$('.ajaxPagerLinkWrapper').html($(data).find('.ajaxPagerLinkWrapper').html());
+			},
+		})
+	})
 });
 
-$(window).scroll(function () { 
+$(window).scroll(function () {
 	if ($('.dh-nav-2').length) {
 		slider.checkMenuScroll();
 	}

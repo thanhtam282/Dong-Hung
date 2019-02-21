@@ -27,6 +27,7 @@
 					color: #ffffff
 	.gallery-item
 		margin-bottom: rem(10px)
+		flex: 0 0 
 		figure
 			position: relative
 		figcaption
@@ -50,7 +51,7 @@
 			&.mdi-youtube-tv
 				&:before
 					content: '\f448'
-		&.gallery-item-big
+		&:nth-child(1) , &:nth-child(2)
 			figcaption
 				padding: rem(22px)
 			h2
@@ -64,13 +65,36 @@
 			a
 				+ a
 					display: none
+	@media (max-width: 480px)
+		.gallery-item
+			flex: 0 0 100%
+			max-width: 100%
+			&:nth-child(1) , &:nth-child(2)
+				flex: 0 0 100%
+				max-width: 100%
+	@media (max-width: 767.99px)
+		.gallery-item
+			flex: 0 0 50%
+			max-width: 50%
+			&:nth-child(1) , &:nth-child(2)
+				flex: 0 0 100%
+				max-width: 100%
 	+mq(down-md)
 		padding-top: rem(30px)
 		padding-bottom: rem(30px)
+	+mq(md)
+		.gallery-item
+			flex: 0 0 50%
+			max-width: 50%
 	+mq(lg)
 		padding-top: rem(50px)
 		padding-bottom: rem(50px)
 		.gallery-item
+			flex: 0 0 33.3333333333%
+			max-width: 33.3333333333%
+			&:nth-child(1) , &:nth-child(2)
+				flex: 0 0 50%
+				max-width: 50%
 			.box-zoom
 				overflow: hidden
 				img
