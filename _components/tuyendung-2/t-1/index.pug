@@ -1,4 +1,37 @@
-section.dh-
+section.dh-tuyendung-2
 	.container
 		.row
+			.col-lg-6
+				h1.h-title.text-upper.line Vị trí tuyển dụng
+			.col-lg-6
+				p Đông Hưng Group luôn hoan nghênh những ứng cử viên năng động, sáng tạo và muốn trở thành một phần của gia đình Đông Hưng Group. Tại đây, môi trường làm việc chuyên nghiệp, công việc đầy thách thức và cơ hội làm việc với những người giàu kinh nghiệm, là nơi tốt nhất để bạn chọn lựa cho con đường phát triển sự nghiệp của riêng mình.
+		.row
 			.col
+				.search-wrapper
+					input(type="text" placeholder="Nhập từ khoá tìm kiếm...") 
+					.custom-select
+						select
+							option Chọn tỉnh/ Thành
+							option Đông Hưng Group
+							option Đông Hưng Group
+					a(href="#").btn.btn-find.btn-ripple Tìm việc
+						span.fa.fa-search 
+		.row
+			.col
+				.table-responsive
+					table
+						thead
+							tr
+								td STT
+								td Vị trí tuyển dụng
+								td Khu vực
+								td Hạn nộp hồ sơ
+						tbody
+							- for ( var x = 0 ; x < 10; x++)
+								tr
+									td 01
+									td Trưởng phòng Bộ phận Quản lý rủi ro thị trường (01)
+									td Bình Dương
+									td 02/03/2019
+
+

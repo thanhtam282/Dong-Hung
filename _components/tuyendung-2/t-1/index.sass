@@ -1,1 +1,134 @@
 .dh-tuyendung-2
+	padding: r(30px) 0
+	@media (min-width: 992px)
+		padding: r(45px) 0
+	h1
+		@media (max-width: 992px)
+			margin-bottom: 1rem
+	.search-wrapper
+		padding-top: r(50px)
+		display: flex
+		@media (max-width: 992px)
+			flex-wrap: wrap
+			justify-content: space-between
+		input
+			border: 1px solid #d5d5d5
+			@media (max-width: 992px)
+				margin: 0
+				height: 40px
+				margin-bottom: .5rem
+			margin-right: 10px
+			width: 100%
+			padding: .25rem 1rem
+			color: color-get($mau,text-6)
+		::-webkit-input-placeholder
+			color: color-get($mau,text-6)
+			// padding: .25rem 1rem
+		.custom-select
+			@media (max-width: 992px)
+				flex: 0 0 49%
+				margin: 0
+			@media (max-width: $sm)
+				flex: 0 0 100%
+			margin-right: 10px
+			position: relative
+			min-width: r(220px)
+			border: 1px solid #d5d5d5
+			select
+				width: 100%
+				-webkit-appearance: none
+				background: #ffffff
+				padding: 8px 1rem
+				border: 0
+				color: color-get($mau,text-6)
+				&:hover, &:active, &:focus
+					outline: none
+				option
+					font-size: r(14px)
+					color: color-get($mau,text-6)
+			&:after
+				pointer-events: none
+				right: 0
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				// right: 20px
+				width: 40px
+				height: 100%
+				border-left: 1px solid #c5c5c5
+				+faws('\f0dd', $fab, 300)
+				line-height: 34px
+				text-align: center
+				color: #c5c5c5
+		.btn-find
+			@media (max-width: 992px)
+				flex: 0 0 49%
+			@media (max-width: $sm)
+				margin-top: .5rem
+				flex: 0 0 100%
+			padding: 0 5px
+			display: block
+			min-width: 242px
+			height: 40px
+			background: color-get($mau, extra)
+			color: color-get($mau,trang)
+			+f-center
+			text-transform: uppercase
+			font-weight: 500
+			transition: .3s all ease-in-out
+			span
+				margin-left: .5rem
+			&:hover
+				text-decoration: none
+				@media (min-width: 992px)
+					background: color-get($mau, main)
+	.table-responsive
+		margin-top: 1rem
+		overflow: auto
+		table
+			width: 100%
+			thead
+				background: color-get($mau, main)
+				tr
+					td
+						border-right: 1px solid #ffffff
+						font-size: r(14px)
+						color: color-get($mau,trang)
+						text-transform: uppercase
+						font-weight: 500
+						padding: .7rem 1rem
+						text-align: center
+						&:first-child
+							width: 7%
+						&:nth-child(2)
+							width: 53%
+						&:nth-child(3), &:nth-child(4)
+							width: 20%
+						&:last-child
+							border: 0
+			tbody
+				tr
+					border: 1px solid #ffffff
+					border-bottom: 0
+					&:nth-child(odd)
+						background: #f8f8f8
+					&:nth-child(even)
+						background: #eeeeee
+					&:last-child
+						border-bottom: 1px solid #ffffff
+
+					td
+						white-space: nowrap
+						border-right: 1px solid #ffffff
+						font-size: r(14px)
+						text-align: center
+						padding: .7rem 1rem
+						&:first-child
+							width: 7%
+						&:nth-child(2)
+							text-align: left
+							width: 53%
+						&:nth-child(3), &:nth-child(4)
+							width: 20%
+						&:last-child
+							border: 0

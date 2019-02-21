@@ -2,6 +2,7 @@
 $(document).ready(() => {
 	header.headerInit();
 	btnRipple('btn-ripple');
+	btnRipple('frm-btn-submit(');
 	nav.navInit();
 	objectFitImages();
 	slider.aboutInit();
