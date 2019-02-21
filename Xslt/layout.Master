@@ -136,8 +136,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 									<div class="info">
 										<portal:ModuleWrapper ID="mdl144" runat="server" ConfigureModuleId="144" />
 									</div>
-									<div class="social"><a href="#"><span class="fa fa-facebook"></span></a><a href="#"><span class="fa fa-youtube">
-											</span></a></div>
+									<portal:ModuleWrapper ID="mdl145" runat="server" ConfigureModuleId="145" />
 								</div>
 							</div>
 						</div>
@@ -146,23 +145,10 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 						<div class="col">
 							<div class="wrapper-link">
 								<div class="link">
-									<ul>
-										<li><a href="#">Sơ đồ trang web</a></li>
-										<li><a href="#">Chính sách bảo mật</a></li>
-										<li><a href="#">Điều khoản sử dụng</a></li>
-									</ul>
+									<portal:ModuleWrapper ID="mdl146" runat="server" ConfigureModuleId="146" />
 									<p>© 2018 Đông Hưng Group. All rights reserved. Designed by Cánh Cam.</p>
 								</div>
-								<div class="ex-link">
-									<p>Đông Hưng Group</p>
-									<div class="custom-select">
-										<select>
-											<option>Đông Hưng Group</option>
-											<option>Đông Hưng Group</option>
-											<option>Đông Hưng Group</option>
-										</select>
-									</div>
-								</div>
+									<portal:ModuleWrapper ID="mdl147" runat="server" ConfigureModuleId="147" />
 							</div>
 						</div>
 					</div>
