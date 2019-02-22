@@ -35,6 +35,8 @@
 	},
 	"devDependencies": {
 		"css-declaration-sorter": "^4.0.1",
-		"gulp-group-css-media-queries": "^1.2.2"
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-uncss": "^1.0.6",
+		"postcss-uncss": "^0.16.1"
 	}
 }

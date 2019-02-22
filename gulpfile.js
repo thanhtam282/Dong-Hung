@@ -16,8 +16,35 @@ browserSync = require('browser-sync')
 readFileSync = require('graceful-fs').readFileSync
 gcmq = require('gulp-group-css-media-queries')
 cssDeclarationSorter = require('css-declaration-sorter')
+uncss = require('gulp-uncss')
 sass.compiler = require('dart-sass');
-
+// Optimize
+gulp.task('optimize', function () {
+	var opt = [
+		
+	];
+	return gulp.src([
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+	])
+		.pipe(uncss({
+			html: [
+				'http://localhost:8000/index.html', 
+				'http://localhost:8000/about.html', 
+				'http://localhost:8000/linhvuchoatdong.html',
+				'http://localhost:8000/truyenthong-ct.html',
+				'http://localhost:8000/contact.html',
+				'http://localhost:8000/phattrienbenvung.html',
+				'http://localhost:8000/thuvien.html',
+				'http://localhost:8000/truyenthong-ct.html',
+				'http://localhost:8000/truyenthong.html',
+				'http://localhost:8000/tuyendung-1.html',
+				'http://localhost:8000/tuyendung-2.html'
+			]
+		}))
+		.pipe(concat('optimize.css'))
+		.pipe(gulp.dest('./dist/css'))
+		.pipe(browserSync.reload({ stream: true }));
+})
 // Task Concat css
 gulp.task('mergeCSS', function () {
 	let cssGlob = JSON.parse(readFileSync('./_plugins.json'))
@@ -207,7 +234,7 @@ gulp.task('serve', function () {
 		},
 		port: 8000
 	})
-	gulp.watch(['./_plugins.json', './_plugins/**/*.css', './_plugins/**/*.js'], gulp.parallel('mergeCSS', 'mergeJS'))
+	gulp.watch(['./_plugins.json', './_plugins/**/*.css', './_plugins/**/*.js'], gulp.parallel('mergeCSS', 'mergeJS' , 'optimize'))
 	gulp.watch(['./templates/**/**.pug', './_components/**/**.pug'], { since: gulp.lastRun('html', 500) }, gulp.series('html'))
 	gulp.watch(['./_components/**/**.sass',], { since: gulp.lastRun('css', 500) }, gulp.series('css'))
 	gulp.watch(['./_components/**/**.js'], { since: gulp.lastRun('scripts', 500) }, gulp.series('scripts'))
@@ -233,4 +260,5 @@ gulp.task('default', gulp.series(
 	'footercss',
 	'scripts',
 	'serve',
+	'optimize',
 ))
