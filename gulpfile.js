@@ -87,6 +87,50 @@ gulp.task('css', function () {
 		.pipe(gulp.dest('./dist/css'))
 		.pipe(browserSync.reload({ stream: true }));
 })
+gulp.task('headercss', function () {
+	return gulp.src([
+		'./_components/_header/*.sass',
+	])
+		.pipe(srcmap.init())
+		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
+		.pipe(postcss([
+			prefixer({
+				browsers: ['last 4 version', "IE 10"],
+				cascade: false,
+			}),
+			cssDeclarationSorter({order: 'smacss'}),
+			cssnano(),
+		]))
+		.pipe(gcmq())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(srcmap.write('./.'))
+		.pipe(gulp.dest('./dist/css/header'))
+		.pipe(browserSync.reload({ stream: true }));
+})
+gulp.task('footercss', function () {
+	return gulp.src([
+		'./_components/_header/*.sass',
+	])
+		.pipe(srcmap.init())
+		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
+		.pipe(postcss([
+			prefixer({
+				browsers: ['last 4 version', "IE 10"],
+				cascade: false,
+			}),
+			cssDeclarationSorter({order: 'smacss'}),
+			cssnano(),
+		]))
+		.pipe(gcmq())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(srcmap.write('./.'))
+		.pipe(gulp.dest('./dist/css/footer'))
+		.pipe(browserSync.reload({ stream: true }));
+})
 
 
 // Task js
@@ -123,10 +167,10 @@ gulp.task('cleanImages', function () {
 
 
 // Task clean images
-gulp.task('copyFavicon', function () {
-	return gulp.src('./favicon.ico')
-		.pipe(gulp.dest('./dist'))
-})
+// gulp.task('copyFavicon', function () {
+// 	return gulp.src('./favicon.ico')
+// 		.pipe(gulp.dest('./dist'))
+// })
 
 
 // Task copy fonts
@@ -178,13 +222,15 @@ gulp.task('default', gulp.series(
 	'copyImages',
 	'copyRevicon',
 	'copyLoadImage',
-	'copyFavicon',
+	// 'copyFavicon',
 	'copyFonts',
 	'copyPolyfill',
 	'mergeJS',
 	'mergeCSS',
 	'html',
 	'css',
+	'headercss',
+	'footercss',
 	'scripts',
 	'serve',
 ))
