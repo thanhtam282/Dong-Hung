@@ -12,7 +12,7 @@
 			<xsl:if test="/NewsList/NextPageUrl != ''">
 				<div class="row grid-row-10">
 					<div class="col-12 grid-col-10">
-						<div class="see-more">
+						<div class="load-more">
 							<a class="btn-ripple">
 								<xsl:attribute name="href">
 									<xsl:value-of select="/NewsList/NextPageUrl"></xsl:value-of>

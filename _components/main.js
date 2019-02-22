@@ -15,9 +15,9 @@ $(document).ready(() => {
 
 
 	// Load Ajax
-	$('body').on('click', '.dh-gallery-1 .see-more a', function (e) {
+	$('body').on('click', '.load-more a', function (e) {
 		e.preventDefault()
-		let pageurl = $('.dh-gallery-1 .see-more a').attr('href');
+		let pageurl = $('.load-more a').attr('href');
 		$.ajax({
 			url: pageurl,
 			data: {
