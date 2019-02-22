@@ -112,10 +112,12 @@
 		<value>2.0</value>
 	</resheader>
 	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+			PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+			PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="ViewMoreText" xml:space="preserve">
 		<value>View More</value>
@@ -132,16 +134,19 @@
 	<data name="otherNews" xml:space="preserve">
 		<value>Other News</value>
 	</data>
- <data name="NavNews" xml:space="preserve">
+	<data name="NavNews" xml:space="preserve">
 		<value>Category</value>
 	</data>
- <data name="hoatDongXaHoi" xml:space="preserve">
+	<data name="hoatDongXaHoi" xml:space="preserve">
 		<value>Other activities</value>
 	</data>
- <data name="OtherJob" xml:space="preserve">
+	<data name="OtherJob" xml:space="preserve">
 		<value>Other jobs</value>
 	</data>
- <data name="DetailText" xml:space="preserve">
+	<data name="DetailText" xml:space="preserve">
 		<value>Detail</value>
+	</data>
+	<data name="NewsOtherTitle" xml:space="preserve">
+		<value>Other News</value>
 	</data>
 </root>
