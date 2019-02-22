@@ -12,6 +12,7 @@ $(document).ready(() => {
 	slider.about_slider_1();
 	slider.about_slider_2();
 	linhvuc_detail.linhvucDetailInit();
+	AOS.init();
 
 
 	// Load Ajax

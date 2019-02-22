@@ -22,7 +22,7 @@
 	<!--Begin News Child-->
 	<xsl:template match="News">
 		<xsl:if test="position() = 1">
-			<div class="col-lg-6 grid-col-10 main">
+			<div class="col-lg-6 grid-col-10 main" data-aos="fade-down" data-aos-duration="1500">
 				<a class="box-item">
 					<xsl:attribute name='href'>
 						<xsl:value-of select='Url'></xsl:value-of>
@@ -59,7 +59,10 @@
 			<xsl:text disable-output-escaping="yes">&lt;div class="row grid-row-10 sub"&gt;</xsl:text>
 		</xsl:if>
 		<xsl:if test="position() &gt; 1">
-			<div class="col-sm-6 grid-col-10">
+			<div class="col-sm-6 grid-col-10" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+				<xsl:attribute name='data-aos-delay' >
+					<xsl:value-of select='position()*300 - 300'></xsl:value-of>
+				</xsl:attribute>
 				<a class="box-item">
 					<xsl:attribute name='href'>
 						<xsl:value-of select='Url'></xsl:value-of>
