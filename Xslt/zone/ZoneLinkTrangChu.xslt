@@ -28,8 +28,8 @@
 					</xsl:attribute>
 					<figure>
 						<div class="box-zoom bg-linear-black">
-							<img>
-							<xsl:attribute name='src'>
+							<img class="lazyload">
+							<xsl:attribute name='data-src'>
 								<xsl:value-of select='ImageUrl'></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name='alt'>
@@ -64,8 +64,8 @@
 				</xsl:attribute>
 				<figure>
 					<div class="box-zoom bg-linear-black">
-						<img>
-						<xsl:attribute name='src'>
+						<img class="lazyload">
+						<xsl:attribute name='data-src'>
 							<xsl:value-of select='ImageUrl'></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name='alt'>

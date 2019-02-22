@@ -196,6 +196,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 	<!-- ////////////// Javascript Include ////////////// -->
 	<!-- <script src="/Data/Sites/1/skins/default/js/polyfill.min.js?v=1.0.0"></script> -->
 	<script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
+	<script src="/Data/Sites/1/skins/default/js/lazysizes.min.js?v=1.0.0" async=""></script>
 	<script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
 	<script type="text/javascript">
 		function HideToolbar() {

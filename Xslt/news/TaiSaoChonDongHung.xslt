@@ -47,8 +47,8 @@
 				</h2>
 				<figure class="box-item">
 					<div class="box-img btn-ripple">
-						<img>
-						<xsl:attribute name='src'>
+						<img class="lazyload">
+						<xsl:attribute name='data-src'>
 							<xsl:value-of select='ImageUrl'></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name='alt'>
@@ -109,8 +109,8 @@
 			<div class="col-6 col-md-3 grid-col-10 sub">
 				<figure style="background-image: url('/Data/Sites/1/media/img/career/career_bg.jpg')">
 					<div class="boxzoom">
-						<img>
-						<xsl:attribute name='src'>
+						<img class="lazyload">
+						<xsl:attribute name='data-src'>
 							<xsl:value-of select='ImageUrl'></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name='alt'>

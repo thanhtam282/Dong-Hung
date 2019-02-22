@@ -19,8 +19,8 @@
 			<div class="col-12 grid-col-10 linhvuc-item">
 				<figure>
 					<div class="box-img btn-ripple">
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -58,8 +58,8 @@
 			<div class="col-md-6 grid-col-10 linhvuc-item">
 				<figure>
 					<div class="box-img btn-ripple">
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">

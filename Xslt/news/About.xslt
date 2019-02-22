@@ -207,8 +207,8 @@
 			<div class="col-12 grid-col-10 main">
 				<figure class="box-item">
 					<div class="box-img btn-ripple">
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -328,8 +328,8 @@
 		<div class="col-sm-4 col-6">
 			<figure>
 				<div class="box-zoom">
-					<img>
-					<xsl:attribute name="src">
+					<img class="lazyload">
+					<xsl:attribute name="data-src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
@@ -355,8 +355,8 @@
 		<div class="col-6 col-md-3 grid-col-10">
 			<figure>
 				<div class="box-zoom">
-					<img>
-					<xsl:attribute name="src">
+					<img class="lazyload">
+					<xsl:attribute name="data-src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
@@ -385,8 +385,8 @@
 
 	<xsl:template match="NewsImages">
 		<div class="swiper-slide" data-aos="fade-right">
-			<img>
-			<xsl:attribute name="src">
+			<img class="lazyload">
+			<xsl:attribute name="data-src">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="alt">

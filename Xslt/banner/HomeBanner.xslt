@@ -17,8 +17,8 @@
   <xsl:template match="Banner">
     <div class="swiper-slide">
       <a href="#">
-        <img>
-        <xsl:attribute name='src'>
+        <img class="lazyload">
+        <xsl:attribute name='data-src'>
           <xsl:value-of select='ImageUrl'></xsl:value-of>
         </xsl:attribute>
         <xsl:attribute name='alt'>
