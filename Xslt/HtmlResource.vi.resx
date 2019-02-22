@@ -144,4 +144,7 @@
 	<data name="DetailText" xml:space="preserve">
 		<value>Chi tiết</value>
 	</data>
+	<data name="NewsOtherTitle" xml:space="preserve">
+		<value>Các tin khác</value>
+	</data>
 </root>

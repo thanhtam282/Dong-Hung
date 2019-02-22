@@ -71,7 +71,11 @@
 						@media (min-width: 992px)
 							color: color-get($mau,trang)
 							border: 1px solid color-get($mau,main)
-	
+		&:not(:nth-child(1))
+			figure
+				figcaption
+					p
+						display: none
 	.sub:not(:nth-child(1))
 		@media (min-width: $sm)
 			flex: 0 0 50%
