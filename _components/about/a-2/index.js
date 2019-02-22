@@ -99,7 +99,7 @@ var slider = {
 		})
 	},
 	about_slider_3: () => {
-		let about_slider_2 = new Swiper('.dh-about-6 .swiper-container', {
+		let about_slider_2 = new Swiper('.dh-about-5 .swiper-container', {
 			slidesPerView: 5,
 			// spaceBetween: 14,
 			// slidesPerView: 'auto',
@@ -114,8 +114,8 @@ var slider = {
 				type: 'progressbar',
 			},
 			navigation: {
-				nextEl: '.dh-about-6 .swiper-button-next',
-				prevEl: '.dh-about-6 .swiper-button-prev',
+				nextEl: '.dh-about-5 .swiper-button-next',
+				prevEl: '.dh-about-5 .swiper-button-prev',
 			},
 			breakpoints: {
 				// when window width is <= 320px
