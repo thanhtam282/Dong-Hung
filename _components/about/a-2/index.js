@@ -71,10 +71,15 @@ var slider = {
 			// },
 			loop: false,
 			// autoHeight: false,
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'progressbar',
-				// autoplay: false,
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	type: 'progressbar',
+			// 	autoplay: false,
+			// },
+			scrollbar: {
+				el: '.dh-about-3 .swiper-scrollbar',
+				hide: false,
+				draggable: true
 			},
 			navigation: {
 				nextEl: '.dh-about-3 .swiper-button-next',

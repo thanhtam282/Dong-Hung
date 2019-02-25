@@ -128,7 +128,7 @@
 									<xsl:apply-templates select="News" mode="ZoneNews3"></xsl:apply-templates>
 								</div>
 							</div>
-							<div class="swiper-pagination"></div>
+							<div class="swiper-scrollbar"></div>
 						</div>
 					</div>
 				</div>
