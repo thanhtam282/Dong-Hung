@@ -60,7 +60,7 @@
 				<div class="container">
 					<div class="row grid-row-10">
 						<div class="col-12 grid-col-10">
-							<h2 class="h-title line text-upper">
+							<h2 class="h-title line text-upper fw-400">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 						</div>
@@ -87,7 +87,7 @@
 				<div class="container">
 					<div class="row grid-row-10">
 						<div class="col-12 grid-col-10">
-							<h2 class="h-title line text-upper c-white">
+							<h2 class="h-title line text-upper c-white fw-400">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 						</div>
@@ -114,7 +114,7 @@
 				<div class="container">
 					<div class="row grid-row-10">
 						<div class="col-12 grid-col-10">
-							<h2 class="h-title text-upper line">
+							<h2 class="h-title text-upper line fw-400">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 						</div>
@@ -152,7 +152,7 @@
 				<div class="container">
 					<div class="row grid-row-10">
 						<div class="col-12 grid-col-10">
-							<h2 class="h-title line text-upper">
+							<h2 class="h-title line text-upper fw-400">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 						</div>
@@ -179,7 +179,7 @@
 				<div class="container">
 					<div class="row grid-row-10">
 						<div class="col-12 grid-col-10">
-							<h2 class="h-title text-upper line">
+							<h2 class="h-title text-upper line fw-400">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 							</h2>
 						</div>

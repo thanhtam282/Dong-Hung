@@ -32,7 +32,7 @@
 						</img>
 					</div>
 					<figcaption>
-						<h2 class="title c-black text-upper">
+						<h2 class="title c-black text-upper fw-400">
 							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h2>
 						<p>
@@ -71,7 +71,7 @@
 						</img>
 					</div>
 					<figcaption>
-						<h2 class="title c-black text-upper">
+						<h2 class="title c-black text-upper fw-400">
 							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</h2>
 						<p>

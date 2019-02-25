@@ -17,39 +17,27 @@ readFileSync = require('graceful-fs').readFileSync
 gcmq = require('gulp-group-css-media-queries')
 cssDeclarationSorter = require('css-declaration-sorter')
 uncss = require('gulp-uncss')
+purgecss = require('gulp-purgecss')
 sass.compiler = require('dart-sass');
 // Optimize
 gulp.task('optimize', function () {
-	var opt = [
-		
-	];
 	return gulp.src([
-		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+		"_plugins/grid.css",
+		"_plugins/font.css",
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/aos/dist/aos.css"
 	])
-		.pipe(uncss({
-			html: [
-				'http://localhost:8000/index.html', 
-				'http://localhost:8000/about.html', 
-				'http://localhost:8000/linhvuchoatdong.html',
-				'http://localhost:8000/truyenthong-ct.html',
-				'http://localhost:8000/contact.html',
-				'http://localhost:8000/phattrienbenvung.html',
-				'http://localhost:8000/thuvien.html',
-				'http://localhost:8000/truyenthong-ct.html',
-				'http://localhost:8000/truyenthong.html',
-				'http://localhost:8000/tuyendung-1.html',
-				'http://localhost:8000/tuyendung-2.html'
-			]
+		.pipe(purgecss({
+			content: ["dist/**/*.html"]
 		}))
-		.pipe(concat('optimize.css'))
-		.pipe(gulp.dest('./dist/css'))
+		.pipe(gulp.dest('./dist/optimize'))
 		.pipe(browserSync.reload({ stream: true }));
 })
 // Task Concat css
 gulp.task('mergeCSS', function () {
 	let cssGlob = JSON.parse(readFileSync('./_plugins.json'))
 	return gulp.src(cssGlob.css)
-		.pipe(srcmap.init())
 		.pipe(postcss([
 			prefixer({
 				browsers: ['last 4 version', "IE 10"],
@@ -57,7 +45,6 @@ gulp.task('mergeCSS', function () {
 			}),
 			cssnano()
 		]))
-		.pipe(srcmap.write('./.'))
 		.pipe(concat('core.min.css'))
 		.pipe(gulp.dest('./dist/css'));
 })
@@ -67,10 +54,8 @@ gulp.task('mergeCSS', function () {
 gulp.task('mergeJS', function () {
 	let cssGlob = JSON.parse(readFileSync('./_plugins.json'))
 	return gulp.src(cssGlob.js)
-		.pipe(srcmap.init())
 		.pipe(uglify())
 		.pipe(concat('core.min.js'))
-		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/js'));
 })
 

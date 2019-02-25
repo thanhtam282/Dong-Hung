@@ -9,17 +9,17 @@
 	.h-title
 		color: color-get($mau,text-3)
 		margin-bottom: r(25px)
-		font-weight: 300
+		// font-weight: 400
 	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
 		display: none
 	.swiper-button-prev
 		margin: 0
-		width: 29px
-		height: 29px
+		width: 25px
+		height: 25px
 		background-image: none
 		z-index: 2
 		left: 0rem
-		top: 60px
+		top: 54px
 		// transform: translateY(-50%)
 		+f-center
 		color: color-get($mau,trang)
@@ -29,7 +29,7 @@
 			color: #ebebeb
 			left: 0
 		@media (min-width: 1500px)
-			left: -15px
+			left: -10px
 
 		&.swiper-button-disabled
 			pointer-events: initial
@@ -40,13 +40,13 @@
 			outline: none
 	.swiper-button-next
 		margin: 0
-		width: 29px
-		height: 29px
+		width: 25px
+		height: 25px
 		+f-center
 		background-image: none
 		z-index: 2
 		right: 0rem
-		top: 60px
+		top: 54px
 		// transform: translateY(-50%)
 		color: color-get($mau,trang)
 		background: color-get($mau, extra)
@@ -55,7 +55,7 @@
 			color: #ebebeb
 			right: 0
 		@media (min-width: 1500px)
-			right: -15px
+			right: -10px
 
 		&.swiper-button-disabled
 			pointer-events: initial
