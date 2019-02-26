@@ -1,34 +1,38 @@
 header.dh-header
-	.header-container
+	.header-wrapper
 		.header-hamburger.btn-ripple
-			span
-		.header-logo
+			span.mdi.mdi-menu
+		.header-logo-mobile
 			img(src="./img/logo.png", alt="")
-		.header-nav
-			nav
-				ul
-					li
-						a.active(href="index.html") Trang chủ
-					li
-						a(href="about.html") Giới thiệu
-					li
-						a(href="linhvuc.html") Lĩnh vực hoạt động
-					li
-						a(href="#") Phát triển bền vựng
-					li
-						a(href="truyenthong.html") Truyền thông
-					li
-						a(href="tuyendung-1.html#") Cơ hội nghề nghiệp
-					li
-						a(href="contact.html") Liên hệ
-		.header-phone
-			a(href="tel:(+84)274-3727015") (+84)274-3727015
-		.header-bar
-			.header-search
-				.searchbox
-					input(type="text", name="" placeholder="Tìm kiếm...")
-					button(type="submit")
-						i.mdi.mdi-magnify
-			.header-language
-				a(href="").language-active EN
+		.header-overlay
+		.header-container
+			.header-logo
+				img(src="./img/logo.png", alt="")
+			.header-nav
+				nav
+					ul
+						li
+							a.active(href="index.html") Trang chủ
+						li
+							a(href="about.html") Giới thiệu
+						li
+							a(href="linhvuc.html") Lĩnh vực hoạt động
+						li
+							a(href="#") Phát triển bền vựng
+						li
+							a(href="truyenthong.html") Truyền thông
+						li
+							a(href="tuyendung-1.html#") Cơ hội nghề nghiệp
+						li
+							a(href="contact.html") Liên hệ
+			.header-phone
+				a(href="tel:(+84)274-3727015") (+84)274-3727015
+			.header-bar
+				.header-search
+					.searchbox
+						input(type="text", name="" placeholder="Tìm kiếm...")
+						button(type="submit")
+							i.mdi.mdi-magnify
+				.header-language
+					a(href="").language-active EN
 

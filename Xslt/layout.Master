@@ -78,25 +78,33 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 		<!-- ////////////// Header ////////////// -->
 		<div id="wrapper">
 			<header class="dh-header">
-				<div class="header-container">
-					<div class="header-hamburger btn-ripple"><span></span></div>
-					<div class="header-logo">
-						<portal:ModuleWrapper ID="mdl138" runat="server" ConfigureModuleId="138" />
+				<div class="header-wrapper">
+					<div class="header-hamburger btn-ripple">
+						<span class="mdi mdi-menu"></span>
 					</div>
-					<div class="header-nav">
-						<nav>
-							<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
-						</nav>
+					<div class="header-logo-mobile">
+						<portal:ModuleWrapper ID="mdl196" runat="server" ConfigureModuleId="196" />
 					</div>
-					<div class="header-phone">
-						<portal:ModuleWrapper ID="mdl139" runat="server" ConfigureModuleId="139" />
-					</div>
-					<div class="header-bar">
-						<div class="header-search">
-							<portal:ModuleWrapper ID="mdl141" runat="server" ConfigureModuleId="141" />
+					<div class="header-overlay"></div>
+					<div class="header-container">
+						<div class="header-logo">
+							<portal:ModuleWrapper ID="mdl138" runat="server" ConfigureModuleId="138" />
 						</div>
-						<div class="header-language">
-							<portal:ModuleWrapper ID="mdl142" runat="server" ConfigureModuleId="142" />
+						<div class="header-nav">
+							<nav>
+								<portal:ModuleWrapper ID="mdl140" runat="server" ConfigureModuleId="140" />
+							</nav>
+						</div>
+						<div class="header-phone">
+							<portal:ModuleWrapper ID="mdl139" runat="server" ConfigureModuleId="139" />
+						</div>
+						<div class="header-bar">
+							<div class="header-search">
+								<portal:ModuleWrapper ID="mdl141" runat="server" ConfigureModuleId="141" />
+							</div>
+							<div class="header-language">
+								<portal:ModuleWrapper ID="mdl142" runat="server" ConfigureModuleId="142" />
+							</div>
 						</div>
 					</div>
 				</div>

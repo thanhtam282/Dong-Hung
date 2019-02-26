@@ -15,6 +15,12 @@ $(document).ready(() => {
 	AOS.init();
 	addClassByLocation();
 
+	if (window.matchMedia("(max-width: 1199.99px)").matches) {
+		let headerHeight = $('header').outerHeight();
+		$('main').css({
+			'padding-top': headerHeight + 'px'
+		})
+	}
 
 	// Load Ajax
 	$('body').on('click', '.load-more a', function (e) {

@@ -4,6 +4,7 @@ var slider = {
 			slidesPerView: 1,
 			autoHeight: false,
 			loop: true,
+			speed: 2000,
 			// autoHeight: false,
 			autoplay: {
 				delay: 5000,

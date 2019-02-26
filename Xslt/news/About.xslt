@@ -309,8 +309,8 @@
 					<h3>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</h3>
-					<xsl:apply-templates select="News" mode="NewsChild4-1"></xsl:apply-templates>
 				</div>
+				<xsl:apply-templates select="News" mode="NewsChild4-1"></xsl:apply-templates>
 			</div>
 		</xsl:if>
 		<xsl:if test="position() = 2 ">
@@ -319,8 +319,8 @@
 					<h3>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</h3>
-					<xsl:apply-templates select="News" mode="NewsChild4-2"></xsl:apply-templates>
 				</div>
+				<xsl:apply-templates select="News" mode="NewsChild4-2"></xsl:apply-templates>
 			</div>
 		</xsl:if>
 	</xsl:template>

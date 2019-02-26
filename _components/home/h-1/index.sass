@@ -22,7 +22,7 @@
 						// display: none
 						color: color-get($mau,trang)
 						transition-delay: .25s
-						transition: 1s all ease-in-out
+						transition: 3s all ease-in-out
 						font-weight: 600
 						text-transform: uppercase
 						transform: translateX(-100%)
@@ -37,8 +37,10 @@
 							display: block
 							&:before
 								transition-delay: 1.25s
-								transition: 1s all ease-in-out
+								transition: 3s all ease-in-out
 								transform: rotate(270deg)
+					@media (max-width: 1199.99px)
+						display: none
 				&.swiper-slide-active
 					.container
 						h1
