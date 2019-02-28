@@ -80,7 +80,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 			<header class="dh-header">
 				<div class="header-wrapper">
 					<div class="header-hamburger btn-ripple">
-						<span class="mdi mdi-menu"></span>
+						<img src="/Data/Sites/1/media/nav-click.png" alt="logo" style="
+						max-height: 2.5rem;"></img>
 					</div>
 					<div class="header-logo-mobile">
 						<portal:ModuleWrapper ID="mdl196" runat="server" ConfigureModuleId="196" />

@@ -12,7 +12,9 @@
 		"_plugins/ofi.min.js",
 		"bower_components/swiper/dist/js/swiper.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/aos/dist/aos.js"
+		"bower_components/aos/dist/aos.js",
+		"_plugins/mapping-listener.js",
+		"_plugins/mapping.js"
 	],
 	"font": [
 		"bower_components/mdi/fonts/*",
