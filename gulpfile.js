@@ -18,21 +18,24 @@ gcmq = require('gulp-group-css-media-queries')
 cssDeclarationSorter = require('css-declaration-sorter')
 uncss = require('gulp-uncss')
 purgecss = require('gulp-purgecss')
+csscss = require('gulp-csscss')
 sass.compiler = require('dart-sass');
 // Optimize
 gulp.task('optimize', function () {
 	return gulp.src([
-		"_plugins/grid.css",
-		"_plugins/font.css",
-		"bower_components/swiper/dist/css/swiper.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css",
-		"bower_components/aos/dist/aos.css"
-	])
+			"_plugins/grid.css",
+			"_plugins/font.css",
+			"bower_components/swiper/dist/css/swiper.min.css",
+			"bower_components/fancybox/dist/jquery.fancybox.min.css",
+			"bower_components/aos/dist/aos.css"
+		])
 		.pipe(purgecss({
 			content: ["dist/**/*.html"]
 		}))
 		.pipe(gulp.dest('./dist/optimize'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 // Task Concat css
 gulp.task('mergeCSS', function () {
@@ -63,32 +66,41 @@ gulp.task('mergeJS', function () {
 // Task html
 gulp.task('html', function () {
 	return gulp.src([
-		'./templates/*.pug',
-		'!./templates/{\_**/**,\_**}.pug'
-	])
+			'./templates/*.pug',
+			'!./templates/{\_**/**,\_**}.pug'
+		])
 		.pipe(pug({
 			pretty: '\t',
 		}))
 		.pipe(plumber())
 		.pipe(gulp.dest('./dist'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 
-
+gulp.task('csscss', function () {
+	gulp.src('dist/css/main.min.css')
+		.pipe(csscss())
+});
 // Task css
 gulp.task('css', function () {
 	return gulp.src([
-		'./_components/*.sass',
-		'!./_components/{\_**/**,\_**}.sass'
-	])
+			'./_components/*.sass',
+			'!./_components/{\_**/**,\_**}.sass'
+		])
 		.pipe(srcmap.init())
-		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
+		.pipe(sass.sync({
+			fiber: Fiber
+		}).on('error', sass.logError))
 		.pipe(postcss([
 			prefixer({
 				browsers: ['last 4 version', "IE 10"],
 				cascade: false,
 			}),
-			cssDeclarationSorter({order: 'smacss'}),
+			cssDeclarationSorter({
+				order: 'smacss'
+			}),
 			cssnano(),
 		]))
 		.pipe(gcmq())
@@ -97,20 +109,26 @@ gulp.task('css', function () {
 		}))
 		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/css'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 gulp.task('headercss', function () {
 	return gulp.src([
-		'./_components/_header/*.sass',
-	])
+			'./_components/_header/*.sass',
+		])
 		.pipe(srcmap.init())
-		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
+		.pipe(sass.sync({
+			fiber: Fiber
+		}).on('error', sass.logError))
 		.pipe(postcss([
 			prefixer({
 				browsers: ['last 4 version', "IE 10"],
 				cascade: false,
 			}),
-			cssDeclarationSorter({order: 'smacss'}),
+			cssDeclarationSorter({
+				order: 'smacss'
+			}),
 			cssnano(),
 		]))
 		.pipe(gcmq())
@@ -119,20 +137,26 @@ gulp.task('headercss', function () {
 		}))
 		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/css/header'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 gulp.task('footercss', function () {
 	return gulp.src([
-		'./_components/_header/*.sass',
-	])
+			'./_components/_header/*.sass',
+		])
 		.pipe(srcmap.init())
-		.pipe(sass.sync({ fiber: Fiber }).on('error', sass.logError))
+		.pipe(sass.sync({
+			fiber: Fiber
+		}).on('error', sass.logError))
 		.pipe(postcss([
 			prefixer({
 				browsers: ['last 4 version', "IE 10"],
 				cascade: false,
 			}),
-			cssDeclarationSorter({order: 'smacss'}),
+			cssDeclarationSorter({
+				order: 'smacss'
+			}),
 			cssnano(),
 		]))
 		.pipe(gcmq())
@@ -141,7 +165,9 @@ gulp.task('footercss', function () {
 		}))
 		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/css/footer'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 
 
@@ -156,7 +182,9 @@ gulp.task('scripts', function () {
 		.pipe(uglify())
 		.pipe(srcmap.write('./.'))
 		.pipe(gulp.dest('./dist/js'))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 })
 
 // Task clean images
@@ -219,10 +247,16 @@ gulp.task('serve', function () {
 		},
 		port: 8000
 	})
-	gulp.watch(['./_plugins.json', './_plugins/**/*.css', './_plugins/**/*.js'], gulp.parallel('mergeCSS', 'mergeJS' , 'optimize'))
-	gulp.watch(['./templates/**/**.pug', './_components/**/**.pug'], { since: gulp.lastRun('html', 500) }, gulp.series('html'))
-	gulp.watch(['./_components/**/**.sass',], { since: gulp.lastRun('css', 500) }, gulp.series('css'))
-	gulp.watch(['./_components/**/**.js'], { since: gulp.lastRun('scripts', 500) }, gulp.series('scripts'))
+	gulp.watch(['./_plugins.json', './_plugins/**/*.css', './_plugins/**/*.js'], gulp.parallel('mergeCSS', 'mergeJS', 'optimize'))
+	gulp.watch(['./templates/**/**.pug', './_components/**/**.pug'], {
+		since: gulp.lastRun('html', 500)
+	}, gulp.series('html'))
+	gulp.watch(['./_components/**/**.sass', ], {
+		since: gulp.lastRun('css', 500)
+	}, gulp.series('css'))
+	gulp.watch(['./_components/**/**.js'], {
+		since: gulp.lastRun('scripts', 500)
+	}, gulp.series('scripts'))
 	gulp.watch(['./img/**/**.{svg,gif,png,jpg,jpeg}'], gulp.series('cleanImages', 'copyImages'))
 	gulp.watch('./dist/*.html').on('change', browserSync.reload)
 	gulp.watch('./dist').on('change', browserSync.reload)
