@@ -31,43 +31,46 @@
 
 	<xsl:template match="News">
 		<div class="grid-col-10 sub">
-			<figure>
-				<div class="box-zoom btn-ripple">
-					<img class="lazyload">
-					<xsl:attribute name="data-src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="title">
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-					</xsl:attribute>
-					</img>
-				</div>
-				<figcaption>
-					<h3>
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
-					</h3>
-					<time>
-						<xsl:value-of select="CreatedDate"></xsl:value-of>
-					</time>
-					<xsl:if test="position() = 1">
-						<p>
-							<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
-						</p>
-					</xsl:if>
-					<a class="btn btn-more btn-ripple" href="truyenthong-ct.html">
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
+			<a href="">
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="target">
+					<xsl:value-of select="Target"></xsl:value-of>
+				</xsl:attribute>
+				<figure>
+					<div class="box-zoom btn-ripple">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="target">
-							<xsl:value-of select="Target"></xsl:value-of>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:value-of select="/NewsList/DetailText" disable-output-escaping="yes"></xsl:value-of>
-					</a>
-				</figcaption>
-			</figure>
+						<xsl:attribute name="title">
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</div>
+					<figcaption>
+						<h3>
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+						</h3>
+						<time>
+							<xsl:value-of select="CreatedDate"></xsl:value-of>
+						</time>
+						<xsl:if test="position() = 1">
+							<p>
+								<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+							</p>
+						</xsl:if>
+						<div class="btn btn-more btn-ripple">
+							<xsl:value-of select="/NewsList/DetailText" disable-output-escaping="yes"></xsl:value-of>
+						</div>
+					</figcaption>
+				</figure>
+			</a>
+			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

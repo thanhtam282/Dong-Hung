@@ -147,4 +147,7 @@
 	<data name="NewsOtherTitle" xml:space="preserve">
 		<value>Các tin khác</value>
 	</data>
+	<data name="JobOtherTitleText" xml:space="preserve">
+		<value>Tuyển dụng khác</value>
+	</data>
 </root>
