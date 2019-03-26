@@ -12,6 +12,8 @@
 	img
 		width: 100%
 		margin: 1rem 0
+	.job-form
+		display: none
 	.full-content
 		padding: 1rem 0
 		margin: 1rem 0
@@ -92,3 +94,68 @@
 						.news-wrapper
 							background: color-get($mau, main)
 							color: color-get($mau,trang)
+	.button
+		margin-bottom: 1rem
+		margin-top: 1rem
+	.btn-apply
+		color: #fff
+		background-color: #13659c
+		height: 40px
+		width: 150px
+		display: inline-block
+		line-height: 40px
+		text-align: center
+.job-form
+	margin-top: 2rem
+	margin-bottom: 2rem
+	padding: 1rem
+	border: 1px solid #13659c
+	iframe
+		width: 100%
+		border: none
+		min-height: 650px
+.dialogpage
+	h4
+		font-size: 1.2rem
+		color: color-get($mau,main)
+		margin-bottom: 1rem
+	.form-group
+		margin-bottom: 1rem
+		input[type="text"] , textarea
+			display: block
+			width: 100%
+			padding: 0.375rem 0.75rem
+			font-size: 1rem
+			line-height: 1.5
+			color: #495057
+			background-color: #fff
+			background-clip: padding-box
+			border: 1px solid #ced4da
+			border-radius: 0.25rem
+			-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+			transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+			transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+	.frm-btnwrap
+		.frm-btn
+			input[type="submit"]
+				border: none
+				padding: .5rem 2rem
+	.container-fluid
+		.col-left
+			display: flex
+			flex-wrap: wrap
+			.form-group
+				width: 50%
+				&:nth-child(1) , &:nth-child(3) , &:nth-child(5)
+					padding-right: 15px
+				&:nth-child(2) , &:nth-child(4)
+					padding-left: 15px
+		.col-right
+			.form-group
+				textarea
+					height: 100px
+	.frm-btnwrap
+		input
+			background: color-get($mau,main)
+			color: #ffffff

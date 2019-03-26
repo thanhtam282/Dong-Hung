@@ -37,7 +37,13 @@ $(document).ready(() => {
 				$('.ajaxPagerLinkWrapper').html($(data).find('.ajaxPagerLinkWrapper').html());
 			},
 		})
-	})
+	});
+
+	$('.dh-truyenthong-ct .job-form').slideUp()
+	$('.dh-truyenthong-ct .btn-apply').on('click', function (event) {
+		event.preventDefault()
+		$('.dh-truyenthong-ct .job-form').slideDown()
+	});
 });
 
 $(window).scroll(function () {

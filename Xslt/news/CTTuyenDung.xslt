@@ -27,6 +27,18 @@
 						<div class="full-content">
 							<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
 						</div>
+						<div class="button">
+							<div class="btn-apply">
+								<a class="btn btn-primary btn-apply" href="">Nộp đơn ngay</a>
+							</div>
+						</div>
+						<div class="job-form">
+							<iframe>
+								<xsl:attribute name="src">
+									<xsl:value-of select="/NewsDetail/ApplyUrl"></xsl:value-of>
+								</xsl:attribute>
+							</iframe>
+						</div>
 					</div>
 				</div>
 				<div class="row grid-row-10">
